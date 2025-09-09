@@ -401,7 +401,7 @@
                         
                         <div class="form-group full-width">
                             <label for="endereco">
-                                Endereço <span class="required">*</span>
+                                Endereço <span class="required">* </span>
                             </label>
                             <input type="text" id="endereco" name="endereco" 
                                    value="Rua das Palmeiras, 123 - Jardim das Flores" required>
