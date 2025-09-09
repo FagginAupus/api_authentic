@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        // Isentar rotas de webhook da proteção CSRF
+        $middleware->validateCsrfTokens(except: [
+            'api/webhook',
+            'api/documents/webhook',
+            'webhook/*'
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
